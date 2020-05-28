@@ -1,20 +1,29 @@
-<!DOCTYPE html>
+OCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>divide two</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 <body>
-<script>
-let str = "HelloFredd";
-let str1;
-let str2;
-str1 = str.slice(0, str.length/2);
-str2 = str.slice(str.length/2, str.length);
-console.log(str1);
-console.log(str2);
-
-</script>
+    Введите текст: <br>
+    <input type="text"><br>
+    Первая часть: <br>
+    <input type="text"> <br>
+    Вторая часть: <br>
+    <input type="text"> <br><br>
+    <button>Press key</button>
+    <script>
+        let input = document.querySelectorAll("input[type='text'");
+        let btn = document.querySelector("button");
+      
+        btn.addEventListener("click", () => {
+            let str = input[0].value;
+            input[1].value = str.slice(0, str.length/2);
+            input[2].value = str.slice(str.length/2, str.length);
+            input[1].setAttribute("readonly","readonly");
+            input[2].setAttribute("readonly","readonly");
+           });
+    </script>
 </body>
 </html>
